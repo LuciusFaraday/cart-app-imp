@@ -1,0 +1,31 @@
+<h3>Add Cart</h3>
+
+<div class="container">
+	<form [formGroup]="addCartForm" (ngSubmit)="onSubmit(addCartForm.value)">
+		<div>
+			<label for="number">
+				Number
+			</label>
+			<input id="number" type="text" formControlName="number">
+		</div>
+		
+		<div>
+			<label for="manufacturerName">
+				Manufacturer Name
+			</label>
+			<input id="manufacturerName" type="text" formControlName="manufacturerName">
+		</div>
+		
+		<div>
+			<label for="condition">
+				Condition
+			</label>
+			<select id="condition" name="condition" formControlName="condition">
+				<option value="working">Working</option>
+				<option value="defective">Defective</option>
+				<option value="underRepair">Under Repair</option>
+			</select>
+		</div>
+		<button class="button" type="submit">Submit</button>
+	</form>
+</div>
